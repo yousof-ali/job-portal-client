@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <div>
-            <footer className="footer bg-base-200 text-base-content p-10 border-t border-gray-300 md:flex md:flex-row md:justify-between">
+            <footer className="footer bg-base-300 text-base-content p-10 border-t border-gray-300 md:flex md:flex-row md:justify-between">
 
                 <aside>
                     <img src="/fabicon.png" alt="" />

@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import AuthContext from '../../Contex/AuthContex/AuthContex';
 import Lottie from "lottie-react";
 import loginAnimation from '../../assets/loginAnimation.json'
+import GoogleLogin from '../shared/GoogleLogin';
 
 const SIgnIn = () => {
     
@@ -50,6 +51,7 @@ const SIgnIn = () => {
                                 </div>
                                 <button className="btn w-full btn-neutral mt-4">Sign In</button>
                             </form>
+                            <GoogleLogin></GoogleLogin>
                         </div>
                     </div>
                 </div>

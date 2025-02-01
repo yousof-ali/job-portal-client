@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import Lottie from "lottie-react";
 import registrAanimation from '../../assets/registerAnimation.json'
 import AuthContext from '../../Contex/AuthContex/AuthContex';
+import GoogleLogin from '../shared/GoogleLogin';
 
 const Register = () => {
     const[err,setError] = useState("");
@@ -54,6 +55,7 @@ const Register = () => {
                             </div>
                             <button className="btn w-full btn-neutral mt-4">Register</button>
                         </form>
+                        <GoogleLogin></GoogleLogin>
                     </div>
                 </div>
             </div>
