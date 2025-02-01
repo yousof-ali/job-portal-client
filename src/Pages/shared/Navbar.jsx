@@ -47,7 +47,7 @@ const Navbar = () => {
         {links}
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+    <a href='/' className=" px-4 cursor-pointer  text-xl"><img className='w-10' src="/logo.png" alt="" /></a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
