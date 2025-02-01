@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Lottie from "lottie-react";
-import registrAanimation from '../../assets/register-animation.json'
+import registrAanimation from '../../assets/registerAnimation.json'
+import AuthContext from '../../Contex/AuthContex/AuthContex';
 
 const Register = () => {
     const[err,setError] = useState("");
-
+    const{createUser,user} = useContext(AuthContext)
 
     const handleRegister = (e) => {
         e.preventDefault();
@@ -20,7 +21,14 @@ const Register = () => {
             setError('use one uppercase in password ! ')
             return
           }
-          
+
+       createUser(email,password) 
+       .then(result => {
+        console.log(result.user)
+       })  
+       .catch((err) => {
+        console.log(err.message)
+       });
     };
 
     return (
@@ -44,7 +52,7 @@ const Register = () => {
                             <div>
                             {err && <p className='text-sm text-red-500'>{err}</p>}
                             </div>
-                            <button className="btn w-full btn-neutral mt-4">Login</button>
+                            <button className="btn w-full btn-neutral mt-4">Register</button>
                         </form>
                     </div>
                 </div>
