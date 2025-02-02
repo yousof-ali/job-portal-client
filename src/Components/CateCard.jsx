@@ -7,7 +7,7 @@ const CateCard = ({data}) => {
         <Link className=''>
         <div
             
-            className="flex my-4 hover:-translate-y-2 transition-transform duration-300 ease-in-out flex-row items-center gap-4 border bg-white rounded-2xl hover:border-blue-500 shadow-xl p-4 mx-4"
+            className="flex my-4 hover:-translate-y-1 transition-transform duration-300 ease-in-out flex-row items-center gap-4 border bg-white rounded-2xl hover:border-blue-500 shadow-xl p-4 mx-4"
         >
             <div className="text-4xl bg-blue-500 text-white rounded-full w-16 h-16 flex items-center justify-center">
                 {data?.icon}

@@ -1,37 +1,42 @@
 [
-    {
-      "job_name": "Industry",
-      "icon": "🏭",
-      "jobs": 200
-    },
-    {
-      "job_name": "Software",
-      "icon": "💻",
-      "jobs": 320
-    },
-    {
-      "job_name": "Finance",
-      "icon": "💰",
-      "jobs": 210
-    },
-    {
-      "job_name": "Development",
-      "icon": "🛠️",
-      "jobs": 180
-    },
-    {
-      "job_name": "Management",
-      "icon": "📈",
-      "jobs": 170
-    },
-    {
-      "job_name": "Advertising",
-      "icon": "📢",
-      "jobs": 150
-    },
-    {
-      "job_name": "Content Writer",
-      "icon": "✍️",
-      "jobs": 135
-    }
-  ]
+  {
+    "job_name": "Engineering",
+    "icon": "🖥️",
+    "jobs": 320
+  },
+  {
+    "job_name": "Design",
+    "icon": "🎨",
+    "jobs": 320
+  },
+  {
+    "job_name": "Data Science",
+    "icon": "📊",
+    "jobs": 320
+  },
+  {
+    "job_name": "Finance",
+    "icon": "💰",
+    "jobs": 210
+  },
+  {
+    "job_name": "Development",
+    "icon": "⚙️",
+    "jobs": 180
+  },
+  {
+    "job_name": "Management",
+    "icon": "🏢",
+    "jobs": 170
+  },
+  {
+    "job_name": "Marketing",
+    "icon": "📣",
+    "jobs": 150
+  },
+  {
+    "job_name": "Teaching",
+    "icon": "📚",
+    "jobs": 135
+  }
+]

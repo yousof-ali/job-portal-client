@@ -1,12 +1,14 @@
 import React from 'react';
 import Banner from './Banner';
 import Categories from './Categories';
+import HotJobs from './HotJobs';
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
             <Categories></Categories>
+            <HotJobs></HotJobs>
         </div>
     );
 };
