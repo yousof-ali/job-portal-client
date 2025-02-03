@@ -8,12 +8,14 @@ import CateCard from '../../Components/CateCard'
 
 const Categories = () => {
     const [categories, setCategories] = useState([]);
+    const [loader,setLoader] = useState(true);
 
     useEffect(() => {
         fetch('/categories.json')
             .then(res => res.json())
             .then(result => {
                 setCategories(result)
+                setLoader(false)
             })
             .catch((err) => {
                 console.log(err.message)
@@ -62,6 +64,9 @@ const Categories = () => {
                 <p className='text-center'>Find the job that’s perfect for you. about 800+ new jobs everyday</p>
             </div>
             <div className="slider-container mx-8 py-2">
+                {
+                    loader&&<p>Loading...</p>
+                }
                 <Slider {...settings}>  
                     {
                         categories.map((item,indx) => <CateCard key={indx} data={item}></CateCard> )
