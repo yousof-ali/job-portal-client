@@ -9,7 +9,8 @@ const Navbar = () => {
     <li>< NavLink to={'/'}>Home</NavLink></li>
     {
       user&& <><li>< NavLink to={'/my-applications'}>My Applications</NavLink></li>
-      <li>< NavLink to={'/add-job'}>Add Job</NavLink></li></> 
+      <li>< NavLink to={'/add-job'}>Add Job</NavLink></li>
+      <li>< NavLink to={'/my-posted-jobs'}>My Posted Jobs</NavLink></li></> 
     }
    
     </>
