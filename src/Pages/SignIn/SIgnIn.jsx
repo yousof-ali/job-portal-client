@@ -3,28 +3,43 @@ import AuthContext from '../../Contex/AuthContex/AuthContex';
 import Lottie from "lottie-react";
 import loginAnimation from '../../assets/loginAnimation.json'
 import GoogleLogin from '../shared/GoogleLogin';
+import axios from 'axios';
+import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
 
 const SIgnIn = () => {
-    
-    const[err,setError] = useState("");
-    const{signInUser} = useContext(AuthContext);
+
+    const [err, setError] = useState("");
+    const { signInUser } = useContext(AuthContext);
+    const navigate = useNavigate()
 
     const handleSignIn = (e) => {
         e.preventDefault();
         setError('')
-        const email = e.target.email.value 
-        const password = e.target.password.value 
-        console.log(email,password);
+        const email = e.target.email.value
+        const password = e.target.password.value
+        console.log(email, password);
 
-        signInUser(email,password)
-        .then(result => {
-            console.log(result.user);
-        })
-        .catch((err) => {
-            setError(err.message)
-        })
+        signInUser(email, password)
+            .then(result => {
+                const user = { email: user.email }
+                axios.post('http://localhost:5000/jwt', user)
+                    .then(data => {
+                        console.log(data);
+                        Swal
+                            .fire({
+                                title: "Log In ",
+                                icon: "success",
+                                draggable: true
+                            });
+                            navigate('/')   
+                    })
+            })
+            .catch((err) => {
+                setError(err.message)
+            })
 
-    
+
     };
     return (
         <div>
