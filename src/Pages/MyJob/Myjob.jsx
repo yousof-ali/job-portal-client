@@ -2,17 +2,24 @@
 import { useEffect, useState } from 'react';
 import useAuth from '../../Hook/useAuth';
 import axios from 'axios';
+import useAxiosSecure from '../../Hook/useAxiosSecure';
 
 const Myjob = () => {
     const { user } = useAuth()
     const [data, setData] = useState([])
+    const axiosSecure = useAxiosSecure()
 
     useEffect(() => {
         // fetch(`http://localhost:5000/application?email=${user?.email}`)
         //     .then(res => res.json())
-        axios.get(`http://localhost:5000/application?email=${user?.email}`,{withCredentials:true})
+        // axios.get(`http://localhost:5000/application?email=${user?.email}`,{withCredentials:true})
+        //     .then(result => {
+        //         setData(result.data)
+        //     })
+        axiosSecure.get(`/application?email=${user?.email}`)
             .then(result => {
-                setData(result.data)
+                setData(result.data);
+                console.log(result);
             })
             .catch((err) => {
                 console.log(err.message);
@@ -38,7 +45,7 @@ const Myjob = () => {
                             {/* row 1 */}
                             {
                                 data.map(single => <tr key={single._id}>
-                                
+
                                     <td>
                                         <div className="">
                                             <div className="avatar">
@@ -47,7 +54,7 @@ const Myjob = () => {
                                                         src={single.company_logo} />
                                                 </div>
                                             </div>
-                                            
+
                                         </div>
                                     </td>
                                     <td>
@@ -57,18 +64,18 @@ const Myjob = () => {
                                     </td>
                                     <td>{single?.title}</td>
                                     <th>
-                                    <div className="font-bold">
-                                                    {single?.company}
-                                                </div>
-                                                <div className="text-sm opacity-50">{single?.location}</div>
+                                        <div className="font-bold">
+                                            {single?.company}
+                                        </div>
+                                        <div className="text-sm opacity-50">{single?.location}</div>
                                     </th>
                                     <td><button className='btn btn-primary'>X</button></td>
                                 </tr>)
                             }
-                            
-                            
+
+
                         </tbody>
-                        
+
                     </table>
                 </div>
             </div>
