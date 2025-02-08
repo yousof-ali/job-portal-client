@@ -10,9 +10,9 @@ const Myjob = () => {
     const axiosSecure = useAxiosSecure()
 
     useEffect(() => {
-        // fetch(`http://localhost:5000/application?email=${user?.email}`)
+        // fetch(`https://job-portal-server-two-bice.vercel.app/application?email=${user?.email}`)
         //     .then(res => res.json())
-        // axios.get(`http://localhost:5000/application?email=${user?.email}`,{withCredentials:true})
+        // axios.get(`https://job-portal-server-two-bice.vercel.app/application?email=${user?.email}`,{withCredentials:true})
         //     .then(result => {
         //         setData(result.data)
         //     })

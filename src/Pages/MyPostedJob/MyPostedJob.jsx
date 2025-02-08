@@ -6,7 +6,7 @@ const MyPostedJob = () => {
     const { user } = useAuth();
     const [mypostedData, setMypostedData] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/jobs?email=${user.email}`)
+        fetch(`https://job-portal-server-two-bice.vercel.app/jobs?email=${user.email}`)
             .then(res => res.json())
             .then(result => {
                 console.log(result)

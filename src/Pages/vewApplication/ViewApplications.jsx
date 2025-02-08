@@ -6,7 +6,7 @@ const ViewApplications = () => {
     const { id } = useParams()
     const [applications, setApplications] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/job-applications/${id}`)
+        fetch(`https://job-portal-server-two-bice.vercel.app/job-applications/${id}`)
             .then(res => res.json())
             .then(result => {
                 console.log(result);
@@ -20,7 +20,7 @@ const ViewApplications = () => {
     const handleUpdateStatus = (e, _id) => {
         console.log(e.target.value)
         const data = {status:e.target.value}
-        fetch(`http://localhost:5000/setStatus/${_id}`,{
+        fetch(`https://job-portal-server-two-bice.vercel.app/setStatus/${_id}`,{
             method:"PATCH",
             headers:{
                 'Content-Type': 'application/json'

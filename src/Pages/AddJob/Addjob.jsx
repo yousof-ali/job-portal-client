@@ -16,7 +16,7 @@ const Addjob = () => {
         newjob.requirements = newjob.requirements.split('\n')
         newjob.responsibilities = newjob.responsibilities.split('\n')
 
-        fetch('http://localhost:5000/add-job', {
+        fetch('https://job-portal-server-two-bice.vercel.app/add-job', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
